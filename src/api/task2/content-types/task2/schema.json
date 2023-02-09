@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "task2s",
+  "info": {
+    "singularName": "task2",
+    "pluralName": "task2s",
+    "displayName": "task2"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "durationInSecs": {
+      "type": "integer"
+    },
+    "picture": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "assignment_2s": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::assignment2.assignment2",
+      "mappedBy": "taskId"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "assignment2s",
+  "info": {
+    "singularName": "assignment2",
+    "pluralName": "assignment2s",
+    "displayName": "assignment2"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "dateTime": {
+      "type": "datetime"
+    },
+    "personId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::person.person",
+      "inversedBy": "assignment_2s"
+    },
+    "taskId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::task2.task2",
+      "inversedBy": "assignment_2s"
+    }
+  }
+}
